@@ -72,5 +72,3 @@ const template = [
 ];
 const menu = remote.Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
-
-

@@ -1,16 +1,20 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const Tray = electron.Tray;
 
 let mainWindow;
 
 function createWindow () {
 
+  const tray = new Tray('assets/person.png');
+  tray.setToolTip('Bloc-notes Electron');
+  
   mainWindow = new BrowserWindow({
     width: 800,
     height: 500,
     icon: 'assets/person.png',
-    title: 'Electron Labo',
+    title: 'Bloc-notes Electron',
     center: true,
     movable: true,
   });
@@ -36,5 +40,7 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+
 
 
