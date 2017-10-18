@@ -7,13 +7,13 @@ let mainWindow;
 
 function createWindow () {
 
-  const tray = new Tray('assets/person.png');
+  const tray = new Tray('assets/note.png');
   tray.setToolTip('Bloc-notes Electron');
   
   mainWindow = new BrowserWindow({
     width: 800,
     height: 500,
-    icon: 'assets/person.png',
+    icon: 'assets/note.png',
     title: 'Bloc-notes Electron',
     center: true,
     movable: true,
