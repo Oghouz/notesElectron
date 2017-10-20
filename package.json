@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "main": "main.js",
   "scripts": {
-  	"test": "electron ."
+    "test": "electron ."
   },
   "author": "Mardan MEMET",
-  "email": "mardan828@gmail.com"
+  "email": "mardan828@gmail.com",
+  "dependencies": {
+    "electron-modal": "^1.0.0",
+    "node-notifier": "^5.1.2",
+    "path": "^0.12.7"
+  }
 }

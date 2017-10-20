@@ -1,6 +1,8 @@
 const remote = require('electron').remote;
 const Menu = require('electron').remote.Menu;
 const fs = require('fs');
+const modal = require('electron-modal');
+const path = require('path');
 
 var content = $('#content');
 content.focus();
@@ -45,6 +47,13 @@ const template = [
             	click: () => {}
             },
             {
+            	type: 'separator'
+            },
+            {
+    			label: 'Parametre',
+    			click: () => { params() }
+    		},
+    		            {
             	type: 'separator'
             },
             {
@@ -128,6 +137,9 @@ const template = [
     			]
     		}
     	]
+    },
+    {
+    	label: '?'
     }
 ];
 
@@ -299,4 +311,21 @@ function setFrameTitle()
 
 
 
- 
+function params()
+{
+	let win = new remote.BrowserWindow({
+		parent: remote.getCurrentWindow(),
+		modal: true,
+		width: 400,
+	    height: 300,
+	    icon: 'assets/param.png',
+	    title: 'Parametre',
+	    center: true,
+	    movable: true,
+	    resizable: false,
+	    backgroundColor: '#e0e0e0'
+	})
+
+	var theUrl = `file://${__dirname}/param.html`;
+	win.loadURL(theUrl);
+}

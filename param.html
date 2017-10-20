@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parametre</title>
+
+
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<input type="checkbox" id="auto-save" name="auto-save" value="1">
+			<span>Enregistre automatiquement</span>
+		</div>
+		<div class="row">
+			<input type="checkbox" id="notif" name="notif" value="1">
+			<span>Notification chaque action</span>
+		</div>
+		<div class="row" style="text-align: right;position:absolute;bottom: 0;">
+			<button class="btn btn-primary" id="save">Enregistre</button>
+			<button class="btn btn-danger" id="cancel">Annuler</button>
+			<hr>
+		</div>
+	</div>
+	
+	<script src="param.js"></script>
+	<script>if (window.module) module = window.module;</script>
+</body>
+</html>
