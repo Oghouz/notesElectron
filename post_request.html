@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POST Request</title>
+
+
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<form action="post_request.html" method="post" id="post-request">
+			<div class="row">
+			<div class="col-md-12">
+				Methode: 
+				<select class="form-control" id="method">
+					<option value="get">GET</option>
+					<option value="post">POST</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				URL: 
+				<input type="text" class="form-control" id="request_url">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2">
+				Params:
+			</div>
+			<div class="col-md-10" id="params">
+				Key:
+				<input type="text" name="param-key" id="param-key-1">
+				Value:
+				<input type="text" name="param-value" id="param-value-1">
+				<button class="btn btn-success" id="addParam">+</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				Contenu: 
+				<textarea class="form-control" rows="5" id="content"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<button class="btn btn-primary" type="submit">Envoyer</button>
+			</div>
+		</div>
+		</form>
+		
+	</div>
+	
+	<script src="post_request.js"></script>
+	<script>if (window.module) module = window.module;</script>
+</body>
+</html>

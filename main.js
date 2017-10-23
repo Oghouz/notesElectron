@@ -12,7 +12,7 @@ function createWindow () {
   
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 500,
+    height: 700,
     icon: 'assets/note.png',
     title: 'Bloc-notes Electron',
     center: true,

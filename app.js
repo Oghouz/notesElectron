@@ -139,8 +139,17 @@ const template = [
     	]
     },
     {
+    	label: 'Developpement',
+    	submenu: [
+    		{
+    			label: 'POST Request',
+    			click: () => { postRequest() }
+    		}
+    	]
+    },
+    {
     	label: '?'
-    }
+    },
 ];
 
 /**
@@ -328,4 +337,21 @@ function params()
 
 	var theUrl = `file://${__dirname}/param.html`;
 	win.loadURL(theUrl);
+}
+
+function postRequest()
+{
+	let win = new remote.BrowserWindow({
+		parent: remote.getCurrentWindow(),
+		modal: true,
+		width: 600,
+		height: 500,
+		title: 'POST Request',
+		center: true,
+		movable: true,
+		resizable: false,
+	})
+
+	var url = `file://${__dirname}/post_request.html`;
+	win.loadURL(url)
 }
